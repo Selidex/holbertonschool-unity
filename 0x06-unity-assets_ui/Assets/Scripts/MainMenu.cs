@@ -6,8 +6,12 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    void Start(){
+        PlayerPrefs.SetInt("Y", 1);
+    }
     public void LevelSelect(int level){
         string l = "Level0" + level.ToString();
+        PlayerPrefs.SetString("Prev", l);
         SceneManager.LoadScene(l);
     }
     public void Options(){

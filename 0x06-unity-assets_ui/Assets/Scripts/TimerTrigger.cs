@@ -9,6 +9,7 @@ public class TimerTrigger : MonoBehaviour
         if (test == 0)
         {
             test = 1;
+            other.GetComponent<Timer>().starttime = Time.time;
             other.GetComponent<Timer>().enabled = true;
         }
     }
